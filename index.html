@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Project: Validating a form
+    Dev: Justin Mangan
+    Date: 4 Oct 2017 -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Form Validation</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="validate.css">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,12 +22,81 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+
+    <body>
+      <div class="container-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="header">ORDER FORM</h1>
+        </div>
+        <form class="form-horizontal" novalidate="novalidate" method="get" action="thankYou.html" id="form1">
+          <div class="form-group">
+            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail" name="email" placeholder="ex: myEmail@email.com">
+            </div>
+            <div class="container-fluid text-center" id="errorMsg1"></div>
+          </div>
+          <div class="form-group">
+            <label for="inputName" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputName" name="name" placeholder="First and Last Name">
+            </div>
+            <div class="container-fluid text-center" id="errorMsg2"></div>
+          </div>
+          <div class="form-group">
+            <label for="inputPhone" class="col-sm-2 control-label">Phone Number</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="ex: 555-555-5555">
+            </div>
+            <div class="container-fluid text-center" id="errorMsg3"></div>
+          </div>
+          <div class="form-group">
+            <label for="selectOption" class="col-sm-2 control-label">Stuff</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="selectOption" name="selection">
+                <option>first option</option>
+                <option>second option</option>
+                <option>third option</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionRadio" id="radioChoice1" value="option1">
+                  Yes!
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionRadio" id="radioChoice2" value="option2">
+                  No!
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid text-center" id="errorMsg4"></div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </div>
+        </form>
+        <div class="container-fluid text-center" id="errorMsg5"></div>
+      </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="validate.js"></script>
   </body>
 </html>

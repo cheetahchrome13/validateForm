@@ -1,0 +1,5 @@
+/*validate.css*/
+
+#errorMsg1, #errorMsg2, #errorMsg3, #errorMsg4, #errorMsg5 {
+  color: red;
+}
