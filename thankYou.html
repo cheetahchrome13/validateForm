@@ -35,7 +35,23 @@
       <div class="container-fluid text-center" id="radio"></div>
 
     <script>
-      document.getElementById("email").innerHTML = window.location.search;
+		var first = getUrlVars()["name"];
+		var second = getUrlVars()["phone"];
+		var third = getUrlVars()["selection"];
+		var fourth = getUrlVars()["optionRadio"];
+		
+		function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		vars[key] = value;
+		});
+		return vars;
+		}
+		
+      document.getElementById("email").innerHTML =  first;      <!--window.location.search;-->
+	  document.getElementById("name").innerHTML =  second;
+	  document.getElementById("phone").innerHTML =  third;
+	  document.getElementById("radio").innerHTML =  fourth;
     </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
